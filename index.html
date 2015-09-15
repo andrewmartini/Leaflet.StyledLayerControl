@@ -11,7 +11,9 @@
         <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
  
       <!--  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> -->
-        <link rel="stylesheet" href="../nyc-map-app/src/leaflet.groupedlayercontrol.css" />
+		<link rel="stylesheet" href="../css/styledLayerControl.css" />
+		<script src="../src/styledLayerControl.js"></script>
+
  
 
         <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" type="text/css" /> 
@@ -27,74 +29,6 @@
                 padding: 0;
                 margin: 0;
             }
-
-
-
-/* new legend code test ---  source :   http://gis.stackexchange.com/questions/141745/horizontal-legend-leaflet-js?rq=1  */
-
-.legend span, .legend label {
-  display: block;
-  background: rgba(255,255,255,1);
-  width: 40px;
-  height: 18px;
-  float: left;
-  opacity: 1;
-  text-align: center;
-  font-size: 80%
-}
-
-/* legend code test 
-    .my-legend {
-              position: absolute;
-              bottom: 75px;
-              right: 10px;
-            }
-            
-    .my-legend {
-              background: rgba(255,255,255,0.9);
-              border-radius: 5px;
-              padding: 2px;
-              border: 2px solid #999;
-              
-              }
-
-  .my-legend .legend-title {
-    text-align: left;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 80%;
-    }
-  .my-legend .legend-scale ul {
-    margin: 0;
-    padding: 0;
-    float: left;
-    list-style: none;
-    }
-  .my-legend .legend-scale ul li {
-    display: block;
-    float: left;
-    width: 35px;
-    margin-bottom: 6px;
-    text-align: center;
-    font-size: 70%;
-    list-style: none;
-    }
-  .my-legend ul.legend-labels li span {
-    display: block;
-    float: right;
-    height: 20px;  /* height & width of the blocks in pixels 
-    width: 35px;
-    }
-  .my-legend .legend-source {
-    font-size: 70%;
-    color: #999;
-    clear: both;
-    }
-  .my-legend a {
-    color: #777;
-    } */
-
-
 
 /* leaflet style overrides */
 
@@ -338,22 +272,6 @@
     <body>
         <div id="map"></div>
 
-<!--   MAPBOX-style LEGEND  - framwork from SCHLANG map
-<div class='my-legend'>
-<div class='legend-title'>Demographic Layers Legend</div>
-<div class='legend-scale'>
-  <ul class='legend-labels'>
-    <li><span style='background:#FFFFB2;'></span>0-10%</li>
-    <li><span style='background:#FED976;'></span>20%</li>
-    <li><span style='background:#FEB24C;'></span>35%</li>
-    <li><span style='background:#FD8D3C;'></span>50%</li>
-    <li><span style='background:#FC4E2A;'></span>65%</li>
-    <li><span style='background:#E31A1C;'></span>90%</li>
-    <li><span style='background:#B10026;'></span>100%</li>
-  </ul>
-</div>
-<!-- <div class='legend-source'>Source: <a href="#link to source">Name of source</a></div> 
-</div> -->
 
 
 
@@ -415,29 +333,7 @@ $('#hide_show_instructions').click(function() {
         <script type="text/javascript">
             window.onload = function () {
 
-function getColor(percent_black) {
-    return percent_black >= 100 ? '#B10026' :  //100
-           percent_black >= 90  ? '#B10026' :  //90-100
-                                                // 80-90 ?
-           percent_black >= 65  ? '#E31A1C' :  //65-90  (make 65-80)
-           percent_black >= 50  ? '#FC4E2A' :  //50-65
-           percent_black >= 35   ? '#FD8D3C' :  //35-50
-           percent_black >= 20   ? '#FEB24C' :  //20-35
-           percent_black >= 10   ? '#FED976' :  //10-20
-                      '#FFFFB2';  //0-10
-}
 
-function getColor(percent_white) {
-    return percent_white >= 100 ? '#B10026' :  //100
-           percent_white >= 90  ? '#B10026' :  //90-100
-                                                // 80-90 ?
-           percent_white >= 65  ? '#E31A1C' :  //65-90  (make 65-80)
-           percent_white >= 50  ? '#FC4E2A' :  //50-65
-           percent_white >= 35   ? '#FD8D3C' :  //35-50
-           percent_white >= 20   ? '#FEB24C' :  //20-35
-           percent_white >= 10   ? '#FED976' :  //10-20
-                      '#FFFFB2';  //0-10
-}
 
 //load up basemaps, store in var objects
 var light_nolabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'});
@@ -1042,7 +938,7 @@ var arab_gradu = cartodb.createLayer(map_object, {
 
 
 
-
+/*
     var baseLayers = {
             "<span class='my-layer-item-basemap'>Gray Basemap</span>": light_nolabels,
             "<span class='my-layer-item-basemap'>Streets</span>": OpenStreetMap_Mapnik,
@@ -1050,8 +946,6 @@ var arab_gradu = cartodb.createLayer(map_object, {
             "<span class='my-layer-item-basemap'>Shaded Relief</span>": Stamen_TerrainBackground,
             "<span class='my-layer-item-basemap'>Black Wallpaper</span>": black_wallpaper
           };
-
-
 
 
     // Overlay layers are grouped
@@ -1130,8 +1024,86 @@ var arab_gradu = cartodb.createLayer(map_object, {
     // Use the custom grouped layer control, not "L.control.layers"
     var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, options);
     map_object.addControl(layerControl);
+*/
+var baseMaps = [
+                      { 
+                groupName : "Various Base Maps",
+                expanded : false,
+                layers    : {
+                  "Gray"      :  light_nolabels, 
+                  "Satellite" :  Esri_WorldImagery,
+                  "Streets"   :  OpenStreetMap_Mapnik,
+                  "Terrain"   :  Stamen_TerrainBackground
+                }
+                  }, {
+                  groupName : "Basemap Labels",
+                layers    : {
+                  "CAU Neighborhoods" : l_neigh_labels,
+                  "Carto Labels"      : light_only_labels
+                }
+                            } 
 
+      ];
+          
+      var overlays = [
+               {
+                groupName : "Political Districts",
+                expanded : true,
+                layers    : { 
+                      "<span class='my-layer-item-steelblue'>Boroughs</span>": l_nybb,
+                      "<span class='my-layer-item-steelblue'>Neighborhoods</span>": l_neighborhoods,
+                      "<span class='my-layer-item-steelblue'>Community Districts</span>": l_nycd,
+                      "<span class='my-layer-item-steelblue'>City Council</span>": l_nycc,
+                      "<span class='my-layer-item-steelblue'>NY State Senate</span>": l_nyss,
+                      "<span class='my-layer-item-steelblue'>NY State Assembly</span>": l_nyad,
+                      "<span class='my-layer-item-steelblue'>US Congressional</span>": l_nycg,
+                      "<span class='my-layer-item-steelblue'>Police Precincts</span>": l_precincts,
+                      "<span class='my-layer-item-steelblue'>Zip Codes</span>": l_zipcode,
+                      "<span class='my-layer-item-steelblue'>UHF Zones</span>": l_uhf_health
+                } 
+                             }, {
+                groupName : "Facilities",
+                expanded : true,
+                layers    : { 
+                      "Community Based Orgs": l_cbo,
+                      "Hospitals & Clinics": l_health,
+                      "Libraries": l_library,
+                      "Senior & Rec Centers": l_fac,
+                      "NYCHA developments": l_nycha,
+                      "Subway Lines": l_subways,
+                      "Parks Properties": l_dpr_parks    
+                } 
+                             }, {
+                groupName : "Religious Organizations",
+                layers    : { 
+                      "<span class='my-layer-item-red'>Christian Orgs</span>": l_christian,
+                      "<span class='my-layer-item-blue'>Jewish Orgs</span>": l_jewish,
+                      "<span class='my-layer-item-green'>Muslim Orgs</span>": l_muslim,
+                      "<span class='my-layer-item-salmon'>Hindu Orgs</span>": l_hindu,
+                      "<span class='my-layer-item-orange'>Buddhist Orgs</span>": l_buddhist,
+                      "<span class='my-layer-item-yellow'>Sikh Orgs</span>": l_sikh,
+                      "<span class='my-layer-item-purple'>Hare Krishna Orgs</span>": l_krishna, 
+                      "Other Religious Orgs": l_other_religion   
+                } 
+                             }               
+      ];
+      
+      // configure StyledLayerControl options for the layer soybeans_sp
+    //  soybeans_sp.StyledLayerControl = {
+    //    removable : true
+    //  }
+      
+      var options = {
+        container_width   : "300px",
+        group_maxHeight     : "80px",
+        //container_maxHeight : "350px", 
+        exclusive         : false
+      };
+    
+        var control = L.Control.styledLayerControl(baseMaps, overlays, options);
+        map_object.addControl(control);
 
+/*
 
 // legend generator code: 
 var nhblacklegend = L.control({position: 'bottomright'});
@@ -1181,7 +1153,7 @@ nhwhitelegend.onAdd = function (map) {
     }
     return div;
 };
-
+*/
 
 //legend.addTo(map_object);
 
@@ -1191,7 +1163,7 @@ nhwhitelegend.onAdd = function (map) {
 // currentLegend = nhwhitelegend;
 
 // http://leafletjs.com/reference.html#control-layers-overlayadd
-
+/*
 map_object.on('overlayadd', function (eventLayer) {
     if (eventLayer.name === 'l_percent_nhblack_choro') {
         map_object.removeControl(currentLegend );
@@ -1205,7 +1177,7 @@ map_object.on('overlayadd', function (eventLayer) {
     }
  
   })
-
+*/
     // adds a simple scalebar
    // L.control.scale().addTo(map_object);
 
