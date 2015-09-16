@@ -525,6 +525,8 @@ var arab_gradu = cartodb.createLayer(map_object, {
     var l_arab_gradu = new L.LayerGroup();
     arab_gradu.addTo(l_arab_gradu); 
 
+// initial layer    
+map_object.addLayer(l_neigh_labels);
 
 var baseMaps = [
                       { 
@@ -598,7 +600,8 @@ var baseMaps = [
         group_maxHeight     : "80px",
         container_maxHeight : "350px", 
         exclusive         : false,
-        collapsed: false
+        collapsed: false,
+        autoZIndex: false 
       };
     
         var control = L.Control.styledLayerControl(baseMaps, overlays, options);
