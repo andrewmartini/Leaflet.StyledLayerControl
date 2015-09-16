@@ -538,17 +538,17 @@ var baseMaps = [
                   "Streets"   :  OpenStreetMap_Mapnik,
                   "Terrain"   :  Stamen_TerrainBackground
                 }
-                  }, {
+                  }  
+      ];
+          
+      var overlays = [
+               {
                   groupName : "Basemap Labels",
                 layers    : {
                   "CAU Neighborhoods" : l_neigh_labels,
                   "Carto Labels"      : labels_overlay
                 }
-                            } 
-      ];
-          
-      var overlays = [
-               {
+                            }, {
                 groupName : "Political Districts",
                 expanded : true,
                 layers    : { 
