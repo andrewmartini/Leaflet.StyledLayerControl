@@ -30,7 +30,7 @@
 }
 .ac-container label{
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-	padding: 5px 20px;
+	padding: 5px 1px;
 	position: relative;
 	z-index: 20;
 	display: block;
