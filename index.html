@@ -92,7 +92,6 @@ var neighborhoods = cartodb.createLayer(map_object, {
     var l_neigh_labels = new L.LayerGroup();
     neigh_labels.addTo(l_neigh_labels);
 
-
 var nycc = cartodb.createLayer(map_object, {
                     user_name: 'andrewmartini',
                     type: 'cartodb',
@@ -115,7 +114,6 @@ var nycd = cartodb.createLayer(map_object, {
       var l_nycd = new L.LayerGroup();
       nycd.addTo(l_nycd); 
 
-
 var nyss = cartodb.createLayer(map_object, {
                     user_name: 'andrewmartini',
                     type: 'cartodb',
@@ -126,7 +124,6 @@ var nyss = cartodb.createLayer(map_object, {
                   });
       var l_nyss = new L.LayerGroup();
       nyss.addTo(l_nyss); 
-
 
 var nyad = cartodb.createLayer(map_object, {
                     user_name: 'andrewmartini',
@@ -139,7 +136,6 @@ var nyad = cartodb.createLayer(map_object, {
       var l_nyad = new L.LayerGroup();
       nyad.addTo(l_nyad); 
 
-
 var nycg = cartodb.createLayer(map_object, {
                     user_name: 'andrewmartini',
                     type: 'cartodb',
@@ -150,7 +146,6 @@ var nycg = cartodb.createLayer(map_object, {
                   });
       var l_nycg = new L.LayerGroup();
       nycg.addTo(l_nycg); 
-
 
 var nybb = cartodb.createLayer(map_object, {
                     user_name: 'andrewmartini',
@@ -334,7 +329,6 @@ var nycha = cartodb.createLayer(map_object, {
           var l_dpr_parks = new L.LayerGroup();
           dpr_parks.addTo(l_dpr_parks); 
 
-
 //******************************************************
 // GROUP 3 CAU OUTREACH TARGETS 
 
@@ -345,7 +339,6 @@ var nycha = cartodb.createLayer(map_object, {
   var nails = cartodb.createLayer(map_object, 'https://ashron24.cartodb.com/api/v2/viz/9cd21ef2-2bfe-11e5-9adf-0e4fddd5de28/viz.json'); 
           var l_nails = new L.LayerGroup();
           nails.addTo(l_nails);
-
 
   var vision_zero = cartodb.createLayer(map_object, 'https://ashron24.cartodb.com/api/v2/viz/5f2fe1a8-2f12-11e5-8b7e-0e0c41326911/viz.json'); 
           var l_vision_zero = new L.LayerGroup();
@@ -530,7 +523,7 @@ map_object.addLayer(l_neigh_labels);
 
 var baseMaps = [
                       { 
-                groupName : "Various Base Maps",
+                groupName : "Basemaps",
                 expanded : false,
                 layers    : {
                   "Gray"      :  light_nolabels, 
@@ -543,7 +536,8 @@ var baseMaps = [
           
       var overlays = [
                {
-                  groupName : "Basemap Labels",
+                groupName : "Basemap Labels",
+                expanded : false,
                 layers    : {
                   "CAU Neighborhoods" : l_neigh_labels,
                   "Carto Labels"      : labels_overlay
@@ -577,6 +571,7 @@ var baseMaps = [
                 } 
                              }, {
                 groupName : "Religious Organizations",
+                expanded : true,
                 layers    : { 
                       "Christian Orgs": l_christian,
                       "Jewish Orgs": l_jewish,
@@ -589,19 +584,19 @@ var baseMaps = [
                 } 
                              }               
       ];
-      
-      // configure StyledLayerControl options for the layer soybeans_sp
-    //  soybeans_sp.StyledLayerControl = {
-    //    removable : true
-    //  }
+
+      //  configure StyledLayerControl options for the layer l_uhf_health
+      //  l_uhf_health.StyledLayerControl = {
+      //  removable : true
+      //  }
       
       var options = {
         container_width   : "300px",
-        group_maxHeight     : "80px",
+        group_maxHeight     : "100px",
         container_maxHeight : "350px", 
         exclusive         : false,
         collapsed: false,
-        autoZIndex: false 
+        autoZIndex: false,
       };
     
         var control = L.Control.styledLayerControl(baseMaps, overlays, options);
@@ -611,4 +606,3 @@ var baseMaps = [
         </script>
     </body>
 </html>
-
