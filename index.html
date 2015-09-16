@@ -11,20 +11,13 @@
         <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
  
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> 
-		<link rel="stylesheet" href="../Leaflet.StyledLayerControl/css/styledLayerControl.css" />
+	<link rel="stylesheet" href="../Leaflet.StyledLayerControl/css/styledLayerControl.css" />
 		
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-		<script src="../Leaflet.StyledLayerControl/src/styledLayerControl.js"></script>
-		
+<!--	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> --> 
 
- 
-
+	
         <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" type="text/css" /> 
  
-
-
-   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script> -->
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 
   <style type="text/css">
             html, body, #map {
@@ -33,242 +26,6 @@
                 margin: 0;
             }
 
-/* leaflet style overrides */
-
-    .leaflet-control-scale {
-      position: absolute;
-      bottom: 25px;
-      left: 10px;
-    }
-
-    .leaflet-control-layers-toggle { 
-        width:auto;
-        background-position:6px 50% ;
-        padding:3px;
-        padding-left:36px;
-        text-decoration:none;
-        line-height:36px;
-    }
-
-    .leaflet-right .leaflet-control {
-      float: right;
-      }
-    .leaflet-top .leaflet-control {
-      margin-top: 5px;
-      }
-    .leaflet-bottom .leaflet-control {
-      margin-bottom: 5px;
-      }
-    .leaflet-left .leaflet-control {
-      margin-left: 10px;
-      }
-    .leaflet-right .leaflet-control {
-      margin-right: 10px;
-      }
-
-    .leaflet-control-layers-expanded {
-          background: none repeat scroll 0 0 rgba(246, 249, 254, 0.95);
-          border-radius: 5px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
-          font: 15px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-          font-weight: 500;
-          padding: 10px 16px 6px 5px;   /* top, right, bottom, left */
-          height: 500px;
-         /* width: 175px; */
-          overflow-y: scroll;   
-        }
-
-     .my-layer-item-bold {      /* black layer item */
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #000000;
-           font-weight: 800;
-    }
-     .my-layer-item-basemap {      /* grey bold layer item */
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #818181;
-           font-weight: 800;
-    }
-
-     .my-layer-item-italic {      /* italic */
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           font-style: italic;
-           color: #74a9cf;
-    }
-
-     .my-layer-item-red {      /* red layer item */
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #800000; font-weight: 500;
-    }
-
-     .my-layer-item-steelblue {     
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #4682B4; font-weight: 500;
-    }
-
-     .my-layer-item-blue {      /* blue layer item */
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #0000cc; font-weight: 500;
-    }
-     .my-layer-item-purple {     
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #800080; font-weight: 500;
-    }
-
-     .my-layer-item-salmon {    
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #CD5C5C;  font-weight: 500;
-    }
-     .my-layer-item-orange {    
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #FFA500; font-weight: 500;
-    }
-     .my-layer-item-yellow {    
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #DAA520;  font-weight: 500;
-    }
-
-     .my-layer-item-green {     
-           font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-           color: #497B49; font-weight: 500;
-    }
-
-/*
-.instructions {
-        position: absolute;
-        top: 10px;
-        left: 50px;
-        background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
-        border-radius: 5px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
-        font: 13px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        padding: 1px 12px 4px 4px;   /* top, right, bottom, left 
-        height: 80px;
-        width: 230px;
-        overflow: auto;    /* allows scrolling in selector 
-    }
-
-      .instruct_title {
-        font: 18px/1.8 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        color: #000;
-        font-weight: 900;
-        padding: 0 12px 1px 4px;
-       }
-
-      .instruct_text {
-        font: 13px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        color: #000;
-        padding: 5px 1px 4px 4px;
-       } */
-
-/* change the appearance of the leaflet zoom control, copied from http://wcfcourier.com/app/special/fatalcrashes/css/styles.css */
-      .leaflet-control-zoom a {
-          background-color: #333;
-          color: #FFF;  /*black*/
-          text-decoration: none;
-      }
-
-      .leaflet-bar a:hover {
-          background-color: #000;
-      }
-
-      .leaflet-control-zoom a:hover {
-          background-color: #000;
-          color: #CCC;
-          text-decoration: none;
-      }
-
-      .leaflet-control-zoom a.leaflet-disabled {
-          background-color: #999;
-        color: #BBB;
-      }
-
-      .leaflet-control-zoom a.leaflet-disabled:hover {
-          color: #BBB;
-      }
-
-
-      /* "instructions" box */
-      #instructions, #hide_show_instructions {
-        background-color: #333;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-        border-radius: 4px;
-        left: 45px;
-        position: absolute;
-        z-index: 20;
-        top: 10px;
-        color: #FFF;
-        font: 14px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
-      }
-      .title {
-        font: 32px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        text-align: right;
-      }
-
-      .credits {
-        text-align: left;
-        font: 10px/2.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        font-weight: 200;
-      }
-
-      #instructions {
-        width: 25%;
-        max-width: 250px;
-        max-height: 120px;
-        z-index: 7;
-        padding: 0 25px 2px 8px;
-        border: none;
-        overflow: auto;
-      }
-      #instructions h1 {
-        width: 25%;
-        text-align: right;
-        max-width: 200px;
-        z-index: 7;
-        padding: 2px 0 0 85px;
-        border: none;
-      }
-
-      .instructions p {
-        margin: 2px;
-        text-align: left;
-        line-height: 13px;
-        padding: 2px 5px 2px 5px;
-        clear: both;
-      }
-
-      /* Hide, show instructions buttons */
-      #hide_show_instructions {
-        height: 20px;
-        z-index: 8;
-        padding: 5px 0 0 6px;
-        margin: 0 0 0 0;
-                font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
-                font-weight: 700;
-              color: #0080ff;
-              border: none;
-      }
-
-      .icon-sort-up, .icon-sort-down, .hide_show_instructions_text {
-        float: right;
-        padding-right: 5px;
-        cursor: pointer;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      .icon-sort-up {
-        padding-top: 5px;
-      }
-
-      .icon-sort-down {
-        padding-bottom: 5px;
-      }
-
       </style>
     </head>
 
@@ -276,65 +33,13 @@
         <div id="map"></div>
 
 
-
-
-<!-- code for "instructions" (legend) from  http://wcfcourier.com/app/special/fatalcrashes/ --> 
-  <div id="hide_show_instructions">
-    <div class="hide_instructions">
-      <!-- <div class="icon-sort-up"></div> -->
-      <div class="hide_show_instructions_text"> HIDE </div>
-    </div>
-    <div class="show_instructions" style="display: none;">
-      <!-- <div class="icon-sort-down"></div> -->
-      <div class="hide_show_instructions_text"> SHOW </div>
-    </div>
-  </div>
-
-  <div id="instructions" class="box-shadow">
-      <p class = "title">Instructions</p> <hr>
-
-      <div id="instructions-text-intro">
-        <p class = "instructions">Layers are drawn as you select them, newest on top of oldest. To change the order, simply toggle a layer off and then on again to make it appear on top of others.</p>
-        <hr> 
-        <p class = "credits"> </p>
-      </div>
-    </div>
-
         <!-- include cartodb.js library -->
         <script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js" type="text/javascript"></script> 
+        	<script src="../Leaflet.StyledLayerControl/src/styledLayerControl.js"></script>
 
-  <script src="../nyc-map-app/src/leaflet.groupedlayercontrol.js"></script>
- 
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
-        <![endif]-->
- 
- <script>
-// Toggle for show, hide instructions
-// Only visible on desktop
-isHideButton = true;
-$('#hide_show_instructions').click(function() {
-  // console.log(isHideButton);
-  if (isHideButton === true) {
-    $('.hide_instructions').hide();
-    $('.show_instructions').show();
-    $('#instructions').slideUp();
-    $('#hide_show_instructions').addClass('box-shadow');
-    $('.hide_show_instructions').show();
-    isHideButton = false;
-  } else {
-    $('.show_instructions').hide();
-    $('.hide_instructions').show();
-    $('#instructions').slideDown();
-    $('#hide_show_instructions').removeClass('box-shadow');
-    $('.hide_show_instructions').show();
-    isHideButton = true;
-  }
-});
-</script>
 
-        <script type="text/javascript">
-            window.onload = function () {
+<script type="text/javascript">
+	window.onload = function () {
 
 
 
@@ -350,16 +55,6 @@ var Stamen_TerrainBackground = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly
 
 var black_wallpaper = L.tileLayer('http://www.colourlovers.com/wallPaper/1200x800/n/2875/COLOURlovers.com-Gothic_Wallpaper.png', { attribution: '&copy; <a href="http://www.colourlovers.com/lover/candycrack/loveNote">CandyCrack</a> contributors'});
 
-/*
-//create basemaps object 
-var baseMaps = {
-            "<span class='my-layer-item-basemap'>Gray Basemap</span>": light_nolabels,
-            "<span class='my-layer-item-basemap'>Streets</span>": OpenStreetMap_Mapnik,
-            "<span class='my-layer-item-basemap'>Satellite Basemap</span>": Esri_WorldImagery,
-            "<span class='my-layer-item-basemap'>Shaded Relief</span>": Stamen_TerrainBackground,
-            "<span class='my-layer-item-basemap'>Black Wallpaper</span>": black_wallpaper
-          };
-*/
             // Instantiate new map object, place it in 'map' element
             var map_object = new L.Map('map', {
                 center: [40.7033,-73.9796], // New York, NY
@@ -369,13 +64,6 @@ var baseMaps = {
                 layers:[light_nolabels]    // initial basemap 
               //scrollWheelZoom: false   // to keep from zooming accidentally
             });
-
-//L.control.layers(baseMaps, null, {collapsed: true, position:'bottomright', autoZIndex: false}).addTo(map_object);
-
-//var legend = L.control({position: 'bottomright'});
-
-// ***********************************************************************
-// Leaflet BOUNDARY overlays using cartodb.createLayer and .addTo() method
 
 var labels_overlay = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'});
     var l_labels_overlay = new L.LayerGroup();
@@ -501,32 +189,6 @@ var uhf_health = cartodb.createLayer(map_object, {
       var l_uhf_health = new L.LayerGroup();
       uhf_health.addTo(l_uhf_health); 
 
-
-/*    
-
-// group list for layer selector -  ITEMS WILL APPEAR IN THE ORDER YOU PUT THEM IN BELOW:  
-var boundaries_group = { 
-                      "<span class='my-layer-item-basemap'>Basemap Labels</span>": l_labels_overlay,
-                      "<span class='my-layer-item-steelblue'>Boroughs</span>": l_nybb,
-                      "<span class='my-layer-item-steelblue'>Neighborhoods</span>": l_neighborhoods,
-                      "<span class='my-layer-item-italic'>Neighborhood Labels</span>": l_neigh_labels, 
-                      "<span class='my-layer-item-steelblue'>Community Districts</span>": l_nycd,
-                      "<span class='my-layer-item-steelblue'>City Council</span>": l_nycc,
-                      "<span class='my-layer-item-steelblue'>NY State Senate</span>": l_nyss,
-                      "<span class='my-layer-item-steelblue'>NY State Assembly</span>": l_nyad,
-                      "<span class='my-layer-item-steelblue'>US Congressional</span>": l_nycg,
-                      "<span class='my-layer-item-steelblue'>Police Precincts</span>": l_precincts,
-                      "<span class='my-layer-item-steelblue'>Zip Codes</span>": l_zipcode,
-                      "<span class='my-layer-item-steelblue'>UHF Zones</span>": l_uhf_health
-                    };
- 
-L.control.layers(null, boundaries_group, {collapsed: false, position:'topright', autoZIndex: false}).addTo(map_object);
-//  L.control.layers(baseMaps, boundaries_group, {collapsed: false, position:'topright', autoZIndex: true}).addTo(map_object);
-*/
-
-// **********************************************************************************
-// Leaflet Religious and CBO's overlays using cartodb.createLayer and .addTo() method
-
 var cbo = cartodb.createLayer(map_object, {  // CBOs
                     user_name: 'ashron24',
                     type: 'cartodb',
@@ -572,16 +234,6 @@ var fac = cartodb.createLayer(map_object, {  // facilities
     fac.addTo(l_fac);
     
 var christian = cartodb.createLayer(map_object, 'https://nycdoitt.cartodb.com/u/asherross/api/v2/viz/f58781ea-570a-11e5-b973-0e4fddd5de28/viz.json'); 
-
-/*  //old code - replaced above w/ secure data link
-var christian = cartodb.createLayer(map_object, {  // religion type
-                    user_name: 'ashron24',
-                    type: 'cartodb',
-                    sublayers: [{
-                      sql: "SELECT cartodb_id, the_geom_webmercator, religion FROM haroldclergy3_11_15_merge ",
-                      cartocss: "#layer [religion='Christian'] [zoom >= 10] { marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/ashron24/assets/2015031200002750-px-red_cross.png);   marker-fill-opacity: 0.9;    marker-line-color: #FFF;  marker-line-width: 1;  marker-line-opacity: 1;    marker-placement: point;  marker-type: ellipse;  marker-width: 5;  marker-allow-overlap: true; }  #layer [religion='Christian'] [zoom >= 11] {    marker-width: 8; } #layer [religion='Christian'] [zoom >= 12] {    marker-width: 12; } #layer [religion='Christian'] [zoom >= 13] {    marker-width: 18; } #layer [religion='Christian'] [zoom >= 14] {marker-width: 24; } #layer [religion='Christian'] [zoom >= 15] { marker-width: 30; } ",
-                      interactivity: "cartodb_id"}]
-                  }); */
 
     var l_christian = new L.LayerGroup();
     christian.addTo(l_christian);
@@ -683,33 +335,8 @@ var nycha = cartodb.createLayer(map_object, {
           dpr_parks.addTo(l_dpr_parks); 
 
 
-
-/*
-              var clergy_cbo = {
-                      "Community Based Orgs": l_cbo,
-                      "Hospitals & Clinics": l_health,
-                      "Libraries": l_library,
-                      "Senior & Rec Centers": l_fac,
-                      "<span class='my-layer-item-red'>Christian Orgs</span>": l_christian,
-                      "<span class='my-layer-item-blue'>Jewish Orgs</span>": l_jewish,
-                      "<span class='my-layer-item-green'>Muslim Orgs</span>": l_muslim,
-                      "<span class='my-layer-item-salmon'>Hindu Orgs</span>": l_hindu,
-                      "<span class='my-layer-item-orange'>Buddhist Orgs</span>": l_buddhist,
-                      "<span class='my-layer-item-yellow'>Sikh Orgs</span>": l_sikh,
-                      "<span class='my-layer-item-purple'>Hare Krishna Orgs</span>": l_krishna, 
-                      "Other Religious Orgs": l_other_religion,
-                      "NYCHA developments": l_nycha,
-                      "Subway Lines": l_subways,
-                      "Parks Properties": l_dpr_parks               
-                };
-
-                L.control.layers(null, clergy_cbo, {collapsed: false, position:'topright', autoZIndex:false}).addTo(map_object);
-*/
-
-
 //******************************************************
 // GROUP 3 CAU OUTREACH TARGETS 
-
 
   var rentreg = cartodb.createLayer(map_object, 'https://nycdoitt.cartodb.com/u/asherross/api/v2/viz/7d9bcc4e-573d-11e5-be93-0e9d821ea90d/viz.json'); 
           var l_rentreg = new L.LayerGroup();
@@ -739,24 +366,6 @@ var cau_events = cartodb.createLayer(map_object, 'https://ashron2224.cartodb.com
 var paid_sick = cartodb.createLayer(map_object, 'https://ashron24.cartodb.com/api/v2/viz/b985e2b8-1911-11e5-bd0e-0e853d047bba/viz.json'); 
           var l_paid_sick = new L.LayerGroup();
           paid_sick.addTo(l_paid_sick);
-
-/*
-
-    var cau_outreach_targets = {
-        "CAU events by Neigh": l_cau_events,
-        "SCRIE Outreach": l_scrie,
-        "SCRIE private test": l_scrie_private,
-        "Rent Regulated Target": l_rentreg,
-        "ID NY Target Locations": l_id_ny,
-        "Paid Sick Leave": l_paid_sick,
-        "Nail Salon // Action": l_nails,
-        "Vision Zero": l_vision_zero
-        
-    };
-
-     L.control.layers(null, cau_outreach_targets, {collapsed: false, position:'topright', autoZIndex: false}).addTo(map_object);
-
-*/
 
 //******************************************************
 // GROUP 4 DEMOGRAPHICS & OTHER
@@ -916,118 +525,7 @@ var arab_gradu = cartodb.createLayer(map_object, {
     var l_arab_gradu = new L.LayerGroup();
     arab_gradu.addTo(l_arab_gradu); 
 
-   // var l_none = new L.LayerGroup();
-    // clearLayers();
 
-/*
- var demographic = {
-
-        "Percent Hispanic": l_percent_hispanic_choro,
-        "Percent NH White": l_percent_nhwhite_choro,
-        "Percent NH Black": l_percent_nhblack_choro,       
-        "Percent NH Asian": l_percent_nhasian_choro,
-        "Median HH Income": l_median_inc_choro,
-        "Median Inc to Rent": l_median_inc_to_rent,
-        "DOE: Lang Plurality": l_lang_plurality,
-        "DOE: Non-Engl Plur": l_plur_non_eng,
-        "DOE: Non-Engl/Span": l_nonengspan,        
-        "Prcnt Foreign Born": l_percent_foreignborn_choro,
-        "Bangladeshi": l_bangladesh_gradu,
-        "Pakistani": l_pakistani_gradu,
-        "Arab": l_arab_gradu
-    };
-  L.control.layers(null, demographic, {collapsed: false, position:'topright', autoZIndex: false}).addTo(map_object);
-*/
-
-
-
-/*
-    var baseLayers = {
-            "<span class='my-layer-item-basemap'>Gray Basemap</span>": light_nolabels,
-            "<span class='my-layer-item-basemap'>Streets</span>": OpenStreetMap_Mapnik,
-            "<span class='my-layer-item-basemap'>Satellite Basemap</span>": Esri_WorldImagery,
-            "<span class='my-layer-item-basemap'>Shaded Relief</span>": Stamen_TerrainBackground,
-            "<span class='my-layer-item-basemap'>Black Wallpaper</span>": black_wallpaper
-          };
-
-
-    // Overlay layers are grouped
-    var groupedOverlays = {
-      "Districts": {
-                      "<span class='my-layer-item-steelblue'>Boroughs</span>": l_nybb,
-                      "<span class='my-layer-item-steelblue'>Neighborhoods</span>": l_neighborhoods,
-                      "<span class='my-layer-item-steelblue'>Community Districts</span>": l_nycd,
-                      "<span class='my-layer-item-steelblue'>City Council</span>": l_nycc,
-                      "<span class='my-layer-item-steelblue'>NY State Senate</span>": l_nyss,
-                      "<span class='my-layer-item-steelblue'>NY State Assembly</span>": l_nyad,
-                      "<span class='my-layer-item-steelblue'>US Congressional</span>": l_nycg,
-                      "<span class='my-layer-item-steelblue'>Police Precincts</span>": l_precincts,
-                      "<span class='my-layer-item-steelblue'>Zip Codes</span>": l_zipcode,
-                      "<span class='my-layer-item-steelblue'>UHF Zones</span>": l_uhf_health
-      },
-      "Labels": {
-                    "Cartodb Basemap Labels": l_labels_overlay,   
-                    "CAU's Neighborhood Labels": l_neigh_labels
-      },
-      "Facilities": {
-                      "Community Based Orgs": l_cbo,
-                      "Hospitals & Clinics": l_health,
-                      "Libraries": l_library,
-                      "Senior & Rec Centers": l_fac,
-                      "NYCHA developments": l_nycha,
-                      "Subway Lines": l_subways,
-                      "Parks Properties": l_dpr_parks 
-      },
-      "Religious Organizations" :{
-                      "<span class='my-layer-item-red'>Christian Orgs</span>": l_christian,
-                      "<span class='my-layer-item-blue'>Jewish Orgs</span>": l_jewish,
-                      "<span class='my-layer-item-green'>Muslim Orgs</span>": l_muslim,
-                      "<span class='my-layer-item-salmon'>Hindu Orgs</span>": l_hindu,
-                      "<span class='my-layer-item-orange'>Buddhist Orgs</span>": l_buddhist,
-                      "<span class='my-layer-item-yellow'>Sikh Orgs</span>": l_sikh,
-                      "<span class='my-layer-item-purple'>Hare Krishna Orgs</span>": l_krishna, 
-                      "Other Religious Orgs": l_other_religion
-      },
-      "CAU Outreach Targets": {
-                    "CAU events by Neigh": l_cau_events,
-                    "SCRIE Outreach": l_scrie,
-                    "Rent Regulated Target": l_rentreg,
-                    "ID NY Target Locations": l_id_ny,
-                    "Paid Sick Leave": l_paid_sick,
-                    "Nail Salon // Action": l_nails,
-                    "Vision Zero": l_vision_zero
-      },
-      "Demographics": {
-                  "None": l_none,
-                  "Percent Hispanic": l_percent_hispanic_choro,
-                  "Percent NH White": l_percent_nhwhite_choro,
-                  "Percent NH Black": l_percent_nhblack_choro,       
-                  "Percent NH Asian": l_percent_nhasian_choro
-      },
-      "Income": {
-                  "Median HH Income": l_median_inc_choro,
-                  "Median Inc to Rent": l_median_inc_to_rent
-      },
-      "DOE Language Data": {
-                  "DOE: Lang Plurality": l_lang_plurality,
-                  "DOE: Non-Engl Plur": l_plur_non_eng,
-                  "DOE: Non-Engl/Span": l_nonengspan
-      },
-      "Foreign Born": {     
-                  "Prcnt Foreign Born": l_percent_foreignborn_choro,
-                  "Bangladeshi": l_bangladesh_gradu,
-                  "Pakistani": l_pakistani_gradu,
-                  "Arab": l_arab_gradu
-      }      
-    };
-
-    // Make the "Districts" group exclusive (use radio inputs)
-    var options = { exclusiveGroups: ["Demographics"], groupCheckboxes: false, collapsed: false, autoZIndex: false };
-
-    // Use the custom grouped layer control, not "L.control.layers"
-    var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, options);
-    map_object.addControl(layerControl);
-*/
 var baseMaps = [
                       { 
                 groupName : "Various Base Maps",
@@ -1045,7 +543,6 @@ var baseMaps = [
                   "Carto Labels"      : labels_overlay
                 }
                             } 
-
       ];
           
       var overlays = [
@@ -1079,13 +576,13 @@ var baseMaps = [
                              }, {
                 groupName : "Religious Organizations",
                 layers    : { 
-                      "<span class='my-layer-item-red'>Christian Orgs</span>": l_christian,
-                      "<span class='my-layer-item-blue'>Jewish Orgs</span>": l_jewish,
-                      "<span class='my-layer-item-green'>Muslim Orgs</span>": l_muslim,
-                      "<span class='my-layer-item-salmon'>Hindu Orgs</span>": l_hindu,
-                      "<span class='my-layer-item-orange'>Buddhist Orgs</span>": l_buddhist,
-                      "<span class='my-layer-item-yellow'>Sikh Orgs</span>": l_sikh,
-                      "<span class='my-layer-item-purple'>Hare Krishna Orgs</span>": l_krishna, 
+                      "Christian Orgs": l_christian,
+                      "Jewish Orgs": l_jewish,
+                      "Muslim Orgs": l_muslim,
+                      "Hindu Orgs": l_hindu,
+                      "Buddhist Orgs": l_buddhist,
+                      "Sikh Orgs": l_sikh,
+                      "Hare Krishna Orgs": l_krishna, 
                       "Other Religious Orgs": l_other_religion   
                 } 
                              }               
@@ -1099,91 +596,13 @@ var baseMaps = [
       var options = {
         container_width   : "300px",
         group_maxHeight     : "80px",
-        //container_maxHeight : "350px", 
+        container_maxHeight : "350px", 
         exclusive         : false
       };
     
         var control = L.Control.styledLayerControl(baseMaps, overlays, options);
         map_object.addControl(control);
-
-/*
-
-// legend generator code: 
-var nhblacklegend = L.control({position: 'bottomright'});
-nhblacklegend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 35, 50, 65, 90],
-        labels = [];
-
-    // loop through our density intervals and generate a label with a colored square for each interval
-    // first loop for colored legend boxes
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<span style="background:' + getColor(grades[i] + 1) + '"></span> ';
-    }
-
-    // a line break
-    div.innerHTML += '<br>';
-
-    // second loop for text
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
-    }
-    return div;
-};
-
-var nhwhitelegend = L.control({position: 'bottomright'});
-nhwhitelegend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 35, 50, 65, 91.1],
-        labels = [];
-
-    // loop through our density intervals and generate a label with a colored square for each interval
-    // first loop for colored legend boxes
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<span style="background:' + getColor(grades[i] + 1) + '"></span> ';
-    }
-
-    // a line break
-    div.innerHTML += '<br>';
-
-    // second loop for text
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
-    }
-    return div;
-};
-*/
-
-//legend.addTo(map_object);
-
-
-
-//nhwhitelegend.addTo(map_object);
-// currentLegend = nhwhitelegend;
-
-// http://leafletjs.com/reference.html#control-layers-overlayadd
-/*
-map_object.on('overlayadd', function (eventLayer) {
-    if (eventLayer.name === 'l_percent_nhblack_choro') {
-        map_object.removeControl(currentLegend );
-        currentLegend = nhblacklegend;
-        nhblacklegend.addTo(map_object);
-    }
-    else if  (eventLayer.name === 'l_percent_nhwhite_choro') {
-        map_object.removeControl(currentLegend );
-        currentLegend = nhwhitelegend;
-        nhwhitelegend.addTo(map_object);
-    }
- 
-  })
-*/
-    // adds a simple scalebar
-   // L.control.scale().addTo(map_object);
-
+        
             }
         </script>
     </body>
